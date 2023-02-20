@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Strong Number</title>
+    </head>
+    <body>
+        <script>
+            //If summation of factorial of digts are equal to that number then it is strong number
+            let num=Number(prompt('Enter Your Number:'));
+            let temp=num;
+            let res=0;
+            console.log(`Given Number is ${num}`)
+            while (num>0){ //run till num is greater than 0
+                rem=num%10; //to extract last digit
+                let fact=1; //for storing factorial value
+                for (let a=1;a<=rem;a++){ //To genrate sequence between 1 to last digit value
+                    fact=fact*a; //It will claculation factorial by multiplying all 
+                }
+            num=Math.floor(num/10); //remove last digit
+            res=fact+res; //store final res in this
+            }
+            console.log(`Result is ${res}`)
+            if (res==temp){ //It will check whether given number and summation of digit fact are same or not
+                console.log(`Given Number is Strong Number ${temp}`)
+            }
+            else{
+                console.log(`Given Number is Not a Strong Number ${temp}`)
+            }
+
+
+
+        </script>
+    </body>
+</html>
